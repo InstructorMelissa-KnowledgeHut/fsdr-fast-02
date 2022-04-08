@@ -1,0 +1,30 @@
+{
+  "name": "Intro to nodejs",
+  "version": "1.0.0",
+  "description": "Practicing npm init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InstructorMelissa-KnowledgeHut/fsdr-fast-02.git"
+  },
+  "keywords": [
+    "Intro",
+    "to",
+    "nodejs"
+  ],
+  "author": "Melissa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InstructorMelissa-KnowledgeHut/fsdr-fast-02/issues"
+  },
+  "homepage": "https://github.com/InstructorMelissa-KnowledgeHut/fsdr-fast-02#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

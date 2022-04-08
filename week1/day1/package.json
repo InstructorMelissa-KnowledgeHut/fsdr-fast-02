@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "server": "nodemon ./day1/index.js",
-    "start": "node ./day1/index.js"
+    "server": "nodemon index.js",
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.17.3"
