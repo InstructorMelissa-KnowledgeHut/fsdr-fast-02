@@ -11,3 +11,6 @@ Create - adds new items to database (POST)
 Read - Simply returns item(s) from the database to the client layer (GET)
 Update - Edits or changes current information in the database (but for only 1 item at a time) (PUT)
 Delete - Removes from the database 1 item (DELETE)
+
+HTTP Response Code
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
