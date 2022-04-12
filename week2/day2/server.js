@@ -39,24 +39,24 @@ http.createServer( (req, res) => {
                 </a></li>` ;        
             }
         });
-          
+        
         filesLink+="</ul>";
-       
+    
         res.end("<h1>List of files:</h1> " + filesLink);
     }
     const sanitizePath = 
     path.normalize(parsedUrl.pathname).replace(/^(\.\.[\/\\])+/, '');
-      
+    
     let pathname = path.join(__dirname, sanitizePath);
-      
+    
     if(!fs.existsSync(pathname)) {
-          
+        
         // If the file is not found, return 404
         res.statusCode = 404;
         res.end(`File ${pathname} not found!`);
     }
     else {
-          
+    
         // Read file from file system limit to 
         // the current directory only.
         fs.readFile(pathname, function(err, data) {
@@ -65,16 +65,15 @@ http.createServer( (req, res) => {
                 res.end(`Error in getting the file.`);
             } 
             else {
-                  
+
                 // Based on the URL path, extract the
                 // file extension. Ex .js, .doc, ...
                 const ext = path.parse(pathname).ext;
-                  
+
                 // If the file is found, set Content-type
                 // and send data
                 res.setHeader('Content-type',
                         mimeType[ext] || 'text/plain' );
-                  
                 res.end(data);
             }
         });
