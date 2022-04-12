@@ -28,6 +28,8 @@ http.createServer( (req, res) => {
     // Parsing (or anylize) the requested url
     const parsedUrl = url.parse(req.url)
 
+    // This if statement is going to look in our current folder / create a list of all the files
+
     if(parsedUrl.pathname==="/"){
         var filesLink="<ul>";
         res.setHeader('Content-type', 'text/html');
@@ -44,6 +46,7 @@ http.createServer( (req, res) => {
     
         res.end("<h1>List of files:</h1> " + filesLink);
     }
+    // cleaning up the url path
     const sanitizePath = 
     path.normalize(parsedUrl.pathname).replace(/^(\.\.[\/\\])+/, '');
     
