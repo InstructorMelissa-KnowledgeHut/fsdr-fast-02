@@ -9,6 +9,7 @@ var input = process.stdin
 input.setEncoding('utf-8')
 input.on('data', (data)=> {
     data = data.trim()
+    console.log("before data", data, "after data")
     if (data =='exit') {
         console.log('Thank you') //If we type in the terminal exit and hit enter then this statement will run
         process.exit()
