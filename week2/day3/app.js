@@ -4,6 +4,7 @@ const http = require('http')
 const dateTime = require('./time.js')
 const port = 8000
 const color = require('./colors.js')
+const calculator = require('./calc.js')
 
 // console.log("** 1 Run Palindrome: ")
 // palindrome("Mountain Dew")
@@ -35,16 +36,26 @@ const color = require('./colors.js')
 //     res.end()
 // }).listen(port)
 
-console.log("**** 6a List all the colors: ", color.colorList)
-console.log("Test: ", color.colorList[0]['colorName'])
+// console.log("**** 6a List all the colors: ", color.colorList)
+// console.log("Test: ", color.colorList[0]['colorName'])
 
-console.log("***** 6b Random Color: ", color.getRandomColor())
-console.log("Test 2: ", color.getRandomColor()['colorName'])
+// console.log("***** 6b Random Color: ", color.getRandomColor())
+// console.log("Test 2: ", color.getRandomColor()['colorName'])
 
-http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'})
-    res.write("Today's Random color is: " + color.getRandomColor()['colorName'])
-    console.log("**** 6a List all the colors: ", color.colorList)
-    console.log("***** 6b Random Color: ", color.getRandomColor())
-    res.end()
-}).listen(port)
+// http.createServer(function(req, res) {
+//     res.writeHead(200, {'Content-Type': 'text/html'})
+//     res.write("Today's Random color is: " + color.getRandomColor()['colorName'])
+//     console.log("**** 6a List all the colors: ", color.colorList)
+//     console.log("***** 6b Random Color: ", color.getRandomColor())
+//     res.end()
+// }).listen(port)
+
+console.log("**** 7 Run the Calculator Functions")
+var x = 20
+var y = 10
+console.log("Setting the variables: \n y=", y,"\n x=", x)
+calculator.add(x,y)
+calculator.subtract(x,y)
+calculator.multiply(x,y)
+calculator.divide(x,y)
+console.log("**** 7 Finished running Calculator Functions")
