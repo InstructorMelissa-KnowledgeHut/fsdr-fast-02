@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel="shortcut icon", href="/beehive.jpeg")
+        link(rel='stylesheet' href='/styles.css')
+        title Calculator
+    body
+        header
+            h1 The Calculator page
+            nav
+                a(href='/') Home
+                a(href="/colors") Colors
+                a(href="/palindrome") Palindrome
+                a(href="/calculator") Calculator
+                a(href="/strings") Fun with Strings
+        main
+            h2 The numbers we are using are:
+            ul
+                li X = #{x}
+                li Y = #{y}
+            div
+                h3 Adding #{x} + #{y} = #{add}
+                h3 Subtracting #{x} + #{y} = #{sub}
+                h3 Multiplying #{x} + #{y} = #{mult}
+                h3 Dividing #{x} + #{y} = #{divide}

@@ -1,0 +1,30 @@
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    color: @font;
+    text-decoration: none;
+    padding: 1em;
+}
+
+@bg: #3a2f2f;
+@font: rgb(177, 197, 202);
+
+body {
+    .flexcolumn();
+    background-color: @bg;
+    color: @font;
+        nav {
+            .flexrow();
+        }
+
+}
